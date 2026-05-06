@@ -608,8 +608,8 @@
   .role-card.blue    .doctor { border-bottom-color: var(--blue); }
   .role-card.pink    .doctor { border-bottom-color: var(--pink); }
 
-  body.text-large { font-size: 22px; }
-  body.text-xlarge { font-size: 25px; }
+  html.text-large, html.text-large body { font-size: 22px; }
+  html.text-xlarge, html.text-xlarge body { font-size: 25px; }
 
   body.high-contrast {
     background: #FFFFFF;
@@ -638,8 +638,8 @@
 
   @media (max-width: 640px) {
     html, body { font-size: 19px; }
-    body.text-large { font-size: 22px; }
-    body.text-xlarge { font-size: 25px; }
+    html.text-large, html.text-large body { font-size: 22px; }
+    html.text-xlarge, html.text-xlarge body { font-size: 25px; }
     main { padding: 1.5rem 1rem 4rem; }
     .a11y-bar { padding: 0.4rem 0.75rem; flex-wrap: wrap; }
     .doctor .specialty { font-size: 1.15rem; }
@@ -918,10 +918,11 @@
     var sizeBtns = document.querySelectorAll('[data-size]');
     var contrastBtn = document.getElementById('contrast');
 
+    var html = document.documentElement;
     function setSize(size) {
-      body.classList.remove('text-large', 'text-xlarge');
-      if (size === 'large') body.classList.add('text-large');
-      if (size === 'xlarge') body.classList.add('text-xlarge');
+      html.classList.remove('text-large', 'text-xlarge');
+      if (size === 'large') html.classList.add('text-large');
+      if (size === 'xlarge') html.classList.add('text-xlarge');
       sizeBtns.forEach(function (b) {
         b.setAttribute('aria-pressed', b.dataset.size === size ? 'true' : 'false');
       });
