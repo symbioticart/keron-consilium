@@ -307,7 +307,6 @@
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 0.5rem;
     font-size: 0.85rem;
   }
@@ -332,7 +331,172 @@
     outline: 3px solid var(--coral);
     outline-offset: 2px;
   }
-  .a11y-bar .label { margin-right: auto; color: var(--muted); }
+  .a11y-bar .label { color: var(--muted); }
+  .a11y-bar .spacer { flex: 1; }
+  .a11y-bar .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.85rem 0.4rem 0.7rem;
+  }
+  .a11y-bar .menu-btn .bars {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 16px;
+  }
+  .a11y-bar .menu-btn .bars span {
+    display: block;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  /* Slide-out TOC drawer */
+  .toc-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: min(360px, 86vw);
+    background: var(--ink);
+    color: var(--cream);
+    z-index: 200;
+    transform: translateX(-105%);
+    transition: transform 280ms cubic-bezier(.2,.8,.2,1);
+    overflow-y: auto;
+    padding: 1.5rem 1.25rem 2.5rem;
+    box-shadow: 0 0 0 transparent;
+  }
+  .toc-drawer.open {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+  }
+  .toc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(35,31,32,0.55);
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+  .toc-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .toc-drawer .toc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(235,226,214,0.18);
+  }
+  .toc-drawer .toc-head .title {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .toc-drawer .close-btn {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(235,226,214,0.3);
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toc-drawer .close-btn:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 2px;
+  }
+  .toc-drawer ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc;
+  }
+  .toc-drawer li { margin: 0; }
+  .toc-drawer a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding: 0.7rem 0.4rem;
+    color: var(--cream);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(235,226,214,0.1);
+    line-height: 1.35;
+    font-size: 1rem;
+    counter-increment: toc;
+  }
+  .toc-drawer a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--coral);
+    flex-shrink: 0;
+    width: 1.6rem;
+  }
+  .toc-drawer a:hover,
+  .toc-drawer a:focus-visible {
+    color: var(--coral);
+    outline: none;
+  }
+
+  body.toc-open { overflow: hidden; }
+
+  /* Doctor header — replaces the old dark pill */
+  .doctor {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--ink);
+  }
+  .doctor .icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .doctor .who {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+  .doctor .specialty {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .doctor .role {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .role-card.green   .doctor { border-bottom-color: var(--green); }
+  .role-card.violet  .doctor { border-bottom-color: var(--violet); }
+  .role-card.blush   .doctor { border-bottom-color: var(--coral); }
+  .role-card.blue    .doctor { border-bottom-color: var(--blue); }
+  .role-card.pink    .doctor { border-bottom-color: var(--pink); }
 
   body.text-large { font-size: 22px; }
   body.text-xlarge { font-size: 25px; }
@@ -357,7 +521,9 @@
   body.high-contrast .role-card.blue,
   body.high-contrast .role-card.pink { background: #FFFFFF; }
   body.high-contrast th { background: #000000; color: #FFFFFF; }
-  body.high-contrast .doctor-tag { background: #000000; color: #FFFFFF; }
+  body.high-contrast .doctor { border-bottom-color: #000000 !important; }
+  body.high-contrast .doctor .specialty { color: #000000; }
+  body.high-contrast .doctor .role { color: #1a1a1a; }
   body.high-contrast a { color: #0033cc; }
 
   @media (max-width: 640px) {
@@ -365,8 +531,9 @@
     body.text-large { font-size: 22px; }
     body.text-xlarge { font-size: 25px; }
     main { padding: 1.5rem 1rem 4rem; }
-    header.site { padding: 1rem 1rem 0; }
     .a11y-bar { padding: 0.4rem 0.75rem; flex-wrap: wrap; }
+    .doctor .specialty { font-size: 1.3rem; }
+    .doctor .icon { font-size: 2rem; }
     .a11y-bar .label { width: 100%; margin-bottom: 0.25rem; }
     h1 { font-size: clamp(1.85rem, 8vw, 2.6rem); }
     h2 { font-size: 1.45rem; }
@@ -410,20 +577,27 @@
 <body>
 <a href="#content" class="skip">К содержанию</a>
 
-<div class="a11y-bar" role="region" aria-label="Настройки чтения">
-  <span class="label">Размер текста:</span>
-  <button type="button" data-size="normal" aria-pressed="true">A</button>
-  <button type="button" data-size="large" aria-pressed="false">A+</button>
-  <button type="button" data-size="xlarge" aria-pressed="false">A++</button>
+<div class="a11y-bar" role="region" aria-label="Навигация и настройки чтения">
+  <button type="button" class="menu-btn" id="menu-toggle" aria-controls="toc" aria-expanded="false" aria-label="Открыть оглавление">
+    <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span>Оглавление</span>
+  </button>
+  <span class="spacer"></span>
+  <span class="label">Текст:</span>
+  <button type="button" data-size="normal" aria-pressed="true" aria-label="Обычный размер">A</button>
+  <button type="button" data-size="large" aria-pressed="false" aria-label="Крупный размер">A+</button>
+  <button type="button" data-size="xlarge" aria-pressed="false" aria-label="Очень крупный размер">A++</button>
   <button type="button" id="contrast" aria-pressed="false">Контраст</button>
 </div>
 
-<header class="site">
-  <a href="/" class="brand" aria-label="hosq">
-    <span class="dot" aria-hidden="true"></span>
-    <span>hosq</span>
-  </a>
-</header>
+<div class="toc-backdrop" id="toc-backdrop" hidden></div>
+<aside class="toc-drawer" id="toc" aria-label="Оглавление" aria-hidden="true">
+  <div class="toc-head">
+    <span class="title">Оглавление</span>
+    <button type="button" class="close-btn" id="toc-close" aria-label="Закрыть оглавление">×</button>
+  </div>
+  <ol id="toc-list"></ol>
+</aside>
 
 <main id="content">
 
@@ -431,25 +605,30 @@
   <h1>Консилиум по анализам Г.Л. Григорьева, 75&nbsp;лет</h1>
   <p class="meta">Чтение для близкого человека. Расшифровка выписки, план действий и красные флаги. <strong>Не заменяет очного врача</strong> — это рабочая структура, чтобы говорить с участковым предметно.</p>
 
-  <h2 class="section-h2">Запрос</h2>
+  <h2 class="section-h2" id="zapros">Запрос</h2>
   <blockquote class="user">
     <p>Изучи текст на фотографиях. Это анализы 75-летнего мужчины. На основе анализов позови консилиум врачей. Пусть мне объясняют, что с ним и что с этим делать.</p>
   </blockquote>
 
-  <h2 class="section-h2">Ответ</h2>
+  <h2 class="section-h2" id="otvet">Ответ</h2>
   <p>Все три страницы прочитал. Это выписной эпикриз из Люберецкой ОКБ — пациент 75 лет с правосторонней верхнедолевой пневмонией, поступил по экстренной, через сутки <strong>отказался от дальнейшего лечения и выписан по собственной инициативе</strong>. Это критически важная деталь — она меняет всё.</p>
   <p>Соберу консилиум.</p>
 
   <hr>
 
-  <h2>Дано</h2>
+  <h2 id="dano">Дано</h2>
   <div class="callout">
     <p>Поступил 28.04 в среднетяжёлом состоянии, выписан 29.04 по собственному отказу через сутки после госпитализации. Один койко-день. Антибиотик в/в (цефтриаксон) получил, по факту — 1–2 дозы максимум. Дома назначен левофлоксацин внутрь.</p>
   </div>
 
-  <div class="role-card blush">
-    <span class="doctor-tag">🩺 Терапевт-пульмонолог · ведущий</span>
-    <p>Геннадий Львович, давайте по порядку — что у вашего родственника произошло.</p>
+  <div class="role-card blush" id="terapevt">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">🩺</span>
+      <span class="who">
+        <span class="specialty">Терапевт-пульмонолог</span>
+        <span class="role">Ведущий консилиума</span>
+      </span>
+    </header>
     <p><strong>Диагноз — внебольничная правосторонняя верхнедолевая пневмония, средней тяжести, осложнённая дыхательной недостаточностью I степени.</strong> Рентген показал «тотальное гомогенное затемнение в верхней доле справа» — это значит, вся верхняя доля правого лёгкого заполнена воспалительным инфильтратом. Не очажок, не сегмент — целая доля.</p>
     <p><strong>Что меня беспокоит больше всего — сам факт того, как он попал в больницу.</strong> Слабость нарастала <strong>две недели</strong>, он перестал вставать и обслуживать себя, и за помощью не обращался. Жена вызвала скорую, когда он уже не вставал. Это типичная картина пневмонии у пожилого: без высокой температуры, без яркой клиники, с маской «просто слабость». Именно так пожилые и умирают от пневмонии — её замечают слишком поздно.</p>
     <p><strong>Шкала CURB-65 у него стоит как 1 балл</strong> — это формально лёгкая категория, амбулаторное лечение возможно. Но шкала здесь обманывает. У него три красных флага, которые шкала не ловит:</p>
@@ -470,8 +649,14 @@
     </ol>
   </div>
 
-  <div class="role-card violet">
-    <span class="doctor-tag">🧪 Терапевт по лабораторным данным</span>
+  <div class="role-card violet" id="laborator">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">🧪</span>
+      <span class="who">
+        <span class="specialty">Терапевт</span>
+        <span class="role">По лабораторным данным</span>
+      </span>
+    </header>
     <p>По анализам — там есть несколько серьёзных находок, которые в выписке прокомментированы вяло.</p>
 
     <h3>Калий 6.4 ммоль/л — гиперкалиемия</h3>
@@ -518,8 +703,14 @@
     </table>
   </div>
 
-  <div class="role-card pink">
-    <span class="doctor-tag">❤️ Кардиолог</span>
+  <div class="role-card pink" id="kardiolog">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">❤️</span>
+      <span class="who">
+        <span class="specialty">Кардиолог</span>
+        <span class="role">По калию и пульсу</span>
+      </span>
+    </header>
     <p>Меня вызвали из-за двух вещей: калий 6.4 и пульс 105 при давлении 100/65.</p>
     <p><strong>Гиперкалиемия 6.4 — это потенциально аритмогенная цифра.</strong> Я бы хотел увидеть ЭКГ, которую ему делали при поступлении (в выписке она не приведена, но при таком калии её обязаны были снять). <strong>Просьба:</strong> запросить в Люберецкой ОКБ копию ЭКГ из истории болезни — родственники имеют право. Если на ней есть высокие заострённые зубцы Т или расширение QRS — это электролитные изменения, и нужно реагировать быстрее.</p>
     <p><strong>В ближайшие 1–2 дня — снять ЭКГ амбулаторно</strong> (любая поликлиника, любая платная клиника, 500–1500 ₽). Особенно если будет ощущение перебоев, головокружение, потемнение в глазах.</p>
@@ -532,8 +723,14 @@
     </ul>
   </div>
 
-  <div class="role-card blue">
-    <span class="doctor-tag">🫁 Пульмонолог · отдельным голосом</span>
+  <div class="role-card blue" id="pulmonolog">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">🫁</span>
+      <span class="who">
+        <span class="specialty">Пульмонолог</span>
+        <span class="role">Отдельным голосом</span>
+      </span>
+    </header>
     <p>Коротко добавлю к коллеге-терапевту.</p>
     <p><strong>Верхнедолевая пневмония у пожилого — отдельный сюжет.</strong> Большинство «обычных» пневмоний — нижнедолевые. Верхнедолевая локализация всегда требует подумать: <strong>а это точно банальная бактериальная пневмония, или это туберкулёз?</strong> В 75 лет, с двухнедельным анамнезом нарастающей слабости, кахексией и падением альбумина — туберкулёз исключать обязательно.</p>
     <h3>Что нужно</h3>
@@ -545,8 +742,14 @@
     <p>Это не паранойя, это стандарт ведения верхнедолевой пневмонии у пожилых. Девять раз из десяти — обычная бактериальная, проходит. На десятый — что-то другое, и пропускать нельзя.</p>
   </div>
 
-  <div class="role-card green">
-    <span class="doctor-tag">🍲 Гериатр · нутрициолог</span>
+  <div class="role-card green" id="geriatr">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">🍲</span>
+      <span class="who">
+        <span class="specialty">Гериатр и нутрициолог</span>
+        <span class="role">Самый занудный голос</span>
+      </span>
+    </header>
     <p>Я тут самый занудный, но самый важный голос. Антибиотик пневмонию вылечит. <strong>Но он не вылечит то, что довело его до пневмонии.</strong></p>
     <p>Картина классическая для гериатрии: <strong>синдром старческой астении (frailty) + саркопения + белково-энергетическая недостаточность</strong>. Признаки:</p>
     <ul>
@@ -567,14 +770,20 @@
     </ol>
   </div>
 
-  <div class="role-card">
-    <span class="doctor-tag">🧠 Отдельный важный разговор — про отказ от госпитализации</span>
+  <div class="role-card" id="otkaz">
+    <header class="doctor">
+      <span class="icon" aria-hidden="true">🧠</span>
+      <span class="who">
+        <span class="specialty">Отказ от госпитализации</span>
+        <span class="role">Отдельный важный разговор</span>
+      </span>
+    </header>
     <p>Это не медицинский, а семейный вопрос, но я как гериатр не могу его обойти.</p>
     <p><strong>Он отказался от стационара через сутки.</strong> Причины бывают разные: страх больниц, потеря автономии, депрессия, начинающееся когнитивное снижение или совершенно осознанное взвешенное решение. Без него самого судить не возьмусь.</p>
     <p>Но <strong>в ближайшие дни кто-то из близких должен жить рядом с ним 24/7</strong> — минимум первую неделю. У пожилого с пневмонией декомпенсация может развиться за часы.</p>
   </div>
 
-  <div class="red-flag" role="region" aria-label="Красные флаги — немедленно вызывать скорую">
+  <div class="red-flag" id="krasnye-flagi" role="region" aria-label="Красные флаги — немедленно вызывать скорую">
     <h3>Признаки, при которых немедленно вызывать скорую</h3>
     <ul>
       <li>сатурация ниже 92%;</li>
@@ -587,7 +796,7 @@
     <p>И всерьёз поговорить с ним ещё раз: <strong>повторная госпитализация — это не «сдаться», это инструмент.</strong> Сейчас он может вернуться сам. Через три дня может быть уже нельзя.</p>
   </div>
 
-  <h2 class="section-h2">Сводный план одной страницей</h2>
+  <h2 class="section-h2" id="plan">Сводный план одной страницей</h2>
 
   <div class="summary">
     <h3>Сегодня–завтра</h3>
@@ -626,12 +835,12 @@
     <p>Сатурация &lt;92%, ЧДД &gt;24, спутанность, посинение, не может пить, падение.</p>
   </div>
 
-  <h2 class="section-h2">Уточняющий вопрос</h2>
+  <h2 class="section-h2" id="utochnyaushchiy">Уточняющий вопрос</h2>
   <blockquote class="user">
     <p>Теперь коротко и простым языком — это лечится?</p>
   </blockquote>
 
-  <h2 class="section-h2">Ответ</h2>
+  <h2 class="section-h2" id="otvet-2">Ответ — это лечится?</h2>
   <p>Да, лечится. Если коротко:</p>
   <p><strong>Сама пневмония — да, должна вылечиться.</strong> Антибиотик ему назначен правильный, на 10 дней. У большинства людей, даже пожилых, верхнедолевая пневмония при таком лечении проходит за 2–3 недели.</p>
 
@@ -692,6 +901,67 @@
         contrastBtn.setAttribute('aria-pressed', 'true');
       }
     } catch (e) {}
+
+    // Slide-out TOC
+    var drawer = document.getElementById('toc');
+    var backdrop = document.getElementById('toc-backdrop');
+    var menuBtn = document.getElementById('menu-toggle');
+    var closeBtn = document.getElementById('toc-close');
+    var tocList = document.getElementById('toc-list');
+
+    var headings = document.querySelectorAll('main h2[id], main .role-card[id], main .red-flag[id]');
+    headings.forEach(function (el) {
+      var label;
+      if (el.tagName === 'H2') {
+        label = el.textContent.trim();
+      } else {
+        var sp = el.querySelector('.doctor .specialty');
+        var ro = el.querySelector('.doctor .role');
+        if (sp) {
+          label = sp.textContent.trim();
+          if (ro) label += ' — ' + ro.textContent.trim().toLowerCase();
+        } else {
+          var h3 = el.querySelector('h3');
+          label = h3 ? h3.textContent.trim() : el.id;
+        }
+      }
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + el.id;
+      a.textContent = label;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      backdrop.hidden = false;
+      drawer.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      body.classList.add('toc-open');
+      closeBtn.focus();
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      body.classList.remove('toc-open');
+      setTimeout(function () { backdrop.hidden = true; }, 300);
+    }
+    menuBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    tocList.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') closeDrawer();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) {
+        closeDrawer();
+        menuBtn.focus();
+      }
+    });
   })();
 </script>
 </body>
