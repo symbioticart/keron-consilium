@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EBE2D6">
+<title>Консилиум по анализам Г.Л. Григорьева, 75 лет</title>
+<meta name="description" content="Расшифровка выписки и план действий: пневмония, гиперкалиемия, кахексия — что делать сейчас и в ближайшие месяцы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --coral: #FF6F55;
+    --violet: #C47CF1;
+    --green: #14B672;
+    --blue: #56A4CB;
+    --pink: #E770C3;
+    --ink: #231F20;
+    --ink-soft: #4A4545;
+    --muted: #6B6566;
+    --line: #C5C4C3;
+    --cream: #EBE2D6;
+    --blush: #E8DCD4;
+    --white: #FFFFFF;
+
+    --serif: "Playfair Display", "Austin Cy", Georgia, serif;
+    --sans: "DM Sans", "Cera Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+
+    --measure: 38rem;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 20px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--coral); color: var(--white); }
+
+  a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  a:hover { color: var(--coral); }
+  a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 2px; }
+
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 1rem;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    z-index: 100;
+    font-weight: 700;
+  }
+  .skip:focus { left: 1rem; }
+
+  header.site {
+    padding: 1.25rem 1.25rem 0;
+    max-width: var(--measure);
+    margin: 0 auto;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .brand .dot {
+    width: 14px; height: 14px;
+    background: var(--coral);
+    border-radius: 999px;
+    display: inline-block;
+  }
+  .brand:hover .dot { background: var(--violet); }
+
+  main {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 2rem 1.25rem 6rem;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--white);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+    color: var(--ink);
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 2.5rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.5rem;
+  }
+
+  .meta strong { color: var(--ink); font-weight: 700; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.55rem, 4vw, 2rem);
+    line-height: 1.2;
+    margin: 3rem 0 1rem;
+    letter-spacing: -0.005em;
+  }
+  h2.section-h2 {
+    font-family: var(--sans);
+    font-weight: 700;
+    border-top: 4px solid var(--ink);
+    padding-top: 1.25rem;
+    margin-top: 4rem;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin: 2.5rem 0 0.75rem;
+  }
+  h3 .em {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-right: 0.4rem;
+    line-height: 1;
+    vertical-align: -0.05em;
+  }
+
+  p { margin: 0 0 1.4rem; }
+
+  strong { font-weight: 700; color: var(--ink); }
+
+  ul, ol {
+    padding-left: 1.4rem;
+    margin: 0 0 1.6rem;
+  }
+  li { margin-bottom: 0.7rem; }
+  li::marker { color: var(--coral); }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--line);
+    margin: 3rem 0;
+  }
+
+  blockquote.user {
+    margin: 1.75rem 0 2.25rem;
+    padding: 1.25rem 1.4rem;
+    background: var(--white);
+    border-left: 6px solid var(--coral);
+    border-radius: 4px;
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+  blockquote.user p { margin: 0; }
+  blockquote.user::before {
+    content: "Вопрос";
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 0.4rem;
+  }
+
+  .callout {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.4rem 1.4rem 0.4rem;
+    margin: 1.75rem 0 2rem;
+  }
+  .callout.coral { background: var(--coral); color: var(--white); }
+  .callout.coral strong { color: var(--white); }
+  .callout.coral li::marker { color: var(--white); }
+
+  .role-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem 0.5rem;
+    margin: 2.5rem 0;
+  }
+  .role-card h3:first-child { margin-top: 0; }
+
+  .role-card.green { background: #DDF1E5; }
+  .role-card.violet { background: #EFDFFB; }
+  .role-card.blush { background: var(--blush); }
+  .role-card.blue { background: #DDECF4; }
+  .role-card.pink { background: #FAE0F0; }
+
+  .doctor-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+    font-size: 0.98rem;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--ink);
+    color: var(--cream);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .red-flag {
+    background: var(--coral);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 1.4rem;
+    margin: 2rem 0;
+  }
+  .red-flag h3 { color: var(--white); margin-top: 0; }
+  .red-flag strong { color: var(--white); }
+  .red-flag ul { margin-bottom: 0.4rem; }
+  .red-flag li::marker { color: var(--white); }
+
+  .summary {
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .summary h3 { color: var(--cream); margin-top: 1.5rem; }
+  .summary h3:first-child { margin-top: 0; }
+  .summary strong { color: var(--white); }
+  .summary li::marker { color: var(--coral); }
+
+  footer.site {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 1.25rem 3rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer.site a { color: var(--muted); }
+
+  .a11y-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .a11y-bar button {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.85rem;
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .a11y-bar button[aria-pressed="true"] {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
+  .a11y-bar button:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 2px;
+  }
+  .a11y-bar .label { margin-right: auto; color: var(--muted); }
+
+  body.text-large { font-size: 22px; }
+  body.text-xlarge { font-size: 25px; }
+
+  body.high-contrast {
+    background: #FFFFFF;
+    color: #000000;
+  }
+  body.high-contrast .meta,
+  body.high-contrast footer.site,
+  body.high-contrast footer.site a { color: #1a1a1a; }
+  body.high-contrast .callout,
+  body.high-contrast blockquote.user,
+  body.high-contrast .role-card,
+  body.high-contrast table {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+  }
+  body.high-contrast .role-card.green,
+  body.high-contrast .role-card.violet,
+  body.high-contrast .role-card.blush,
+  body.high-contrast .role-card.blue,
+  body.high-contrast .role-card.pink { background: #FFFFFF; }
+  body.high-contrast th { background: #000000; color: #FFFFFF; }
+  body.high-contrast .doctor-tag { background: #000000; color: #FFFFFF; }
+  body.high-contrast a { color: #0033cc; }
+
+  @media (max-width: 640px) {
+    html, body { font-size: 19px; }
+    body.text-large { font-size: 22px; }
+    body.text-xlarge { font-size: 25px; }
+    main { padding: 1.5rem 1rem 4rem; }
+    header.site { padding: 1rem 1rem 0; }
+    .a11y-bar { padding: 0.4rem 0.75rem; flex-wrap: wrap; }
+    .a11y-bar .label { width: 100%; margin-bottom: 0.25rem; }
+    h1 { font-size: clamp(1.85rem, 8vw, 2.6rem); }
+    h2 { font-size: 1.45rem; }
+    h2.section-h2 { font-size: 1.55rem; }
+    h3 { font-size: 1.2rem; }
+    .role-card { padding: 1.25rem 1.1rem 0.4rem; border-radius: 14px; }
+    .summary { padding: 1.4rem 1.1rem; }
+    blockquote.user { padding: 1rem 1.1rem; }
+    table, thead, tbody, tr, th, td { display: block; width: 100%; }
+    thead { display: none; }
+    table { background: transparent; padding: 0; border-radius: 0; }
+    tbody tr {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 0.4rem 1rem 0.6rem;
+      margin-bottom: 0.85rem;
+    }
+    tbody td {
+      border-bottom: 1px dashed var(--line);
+      padding: 0.7rem 0;
+      font-size: 1rem;
+    }
+    tbody td:last-child { border-bottom: none; }
+    tbody td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+</style>
+</head>
+<body>
+<a href="#content" class="skip">К содержанию</a>
+
+<div class="a11y-bar" role="region" aria-label="Настройки чтения">
+  <span class="label">Размер текста:</span>
+  <button type="button" data-size="normal" aria-pressed="true">A</button>
+  <button type="button" data-size="large" aria-pressed="false">A+</button>
+  <button type="button" data-size="xlarge" aria-pressed="false">A++</button>
+  <button type="button" id="contrast" aria-pressed="false">Контраст</button>
+</div>
+
+<header class="site">
+  <a href="/" class="brand" aria-label="hosq">
+    <span class="dot" aria-hidden="true"></span>
+    <span>hosq</span>
+  </a>
+</header>
+
+<main id="content">
+
+  <span class="eyebrow">Консилиум · разбор</span>
+  <h1>Консилиум по анализам Г.Л. Григорьева, 75&nbsp;лет</h1>
+  <p class="meta">Чтение для близкого человека. Расшифровка выписки, план действий и красные флаги. <strong>Не заменяет очного врача</strong> — это рабочая структура, чтобы говорить с участковым предметно.</p>
+
+  <h2 class="section-h2">Запрос</h2>
+  <blockquote class="user">
+    <p>Изучи текст на фотографиях. Это анализы 75-летнего мужчины. На основе анализов позови консилиум врачей. Пусть мне объясняют, что с ним и что с этим делать.</p>
+  </blockquote>
+
+  <h2 class="section-h2">Ответ</h2>
+  <p>Все три страницы прочитал. Это выписной эпикриз из Люберецкой ОКБ — пациент 75 лет с правосторонней верхнедолевой пневмонией, поступил по экстренной, через сутки <strong>отказался от дальнейшего лечения и выписан по собственной инициативе</strong>. Это критически важная деталь — она меняет всё.</p>
+  <p>Соберу консилиум.</p>
+
+  <hr>
+
+  <h2>Дано</h2>
+  <div class="callout">
+    <p>Поступил 28.04 в среднетяжёлом состоянии, выписан 29.04 по собственному отказу через сутки после госпитализации. Один койко-день. Антибиотик в/в (цефтриаксон) получил, по факту — 1–2 дозы максимум. Дома назначен левофлоксацин внутрь.</p>
+  </div>
+
+  <div class="role-card blush">
+    <span class="doctor-tag">🩺 Терапевт-пульмонолог · ведущий</span>
+    <p>Геннадий Львович, давайте по порядку — что у вашего родственника произошло.</p>
+    <p><strong>Диагноз — внебольничная правосторонняя верхнедолевая пневмония, средней тяжести, осложнённая дыхательной недостаточностью I степени.</strong> Рентген показал «тотальное гомогенное затемнение в верхней доле справа» — это значит, вся верхняя доля правого лёгкого заполнена воспалительным инфильтратом. Не очажок, не сегмент — целая доля.</p>
+    <p><strong>Что меня беспокоит больше всего — сам факт того, как он попал в больницу.</strong> Слабость нарастала <strong>две недели</strong>, он перестал вставать и обслуживать себя, и за помощью не обращался. Жена вызвала скорую, когда он уже не вставал. Это типичная картина пневмонии у пожилого: без высокой температуры, без яркой клиники, с маской «просто слабость». Именно так пожилые и умирают от пневмонии — её замечают слишком поздно.</p>
+    <p><strong>Шкала CURB-65 у него стоит как 1 балл</strong> — это формально лёгкая категория, амбулаторное лечение возможно. Но шкала здесь обманывает. У него три красных флага, которые шкала не ловит:</p>
+    <ul>
+      <li><strong>сатурация 95–96%</strong> на воздухе — на грани, у пожилого это уже сигнал;</li>
+      <li><strong>ЧСС 105</strong>, <strong>АД 100/65</strong> — тахикардия и пониженное давление, признаки системного ответа;</li>
+      <li><strong>кахексия</strong> и <strong>ИМТ 20.76</strong> при росте 170 и весе 60 кг — резерва организма нет.</li>
+    </ul>
+    <p>И вот он в таком состоянии <strong>отказался от стационара и ушёл домой</strong>. По сути, вместо в/в антибиотика 7–10 дней он получит таблетки. Это рискованно, но не безнадёжно — если строго выполнять домашний режим и быстро реагировать на ухудшение.</p>
+    <h3>Что делать прямо сейчас</h3>
+    <ol>
+      <li><strong>Левофлоксацин 500 мг 2 раза в день, 10 дней — обязательно полный курс.</strong> Не бросать на 5-й день, когда полегчает: бросить досрочно = рецидив с устойчивой флорой.</li>
+      <li><strong>Купить пульсоксиметр</strong> (на палец, 1500–3000 ₽). Мерить сатурацию 3–4 раза в день. <strong>Если падает ниже 92% — звонить в скорую немедленно</strong>, не ждать утра.</li>
+      <li>Мерить температуру и пульс утром и вечером, записывать.</li>
+      <li>Контрольный рентген через 7 дней — это уже назначено, пропустить нельзя.</li>
+      <li>Через 7–10 дней обязательно ОАК — посмотреть, ушло ли воспаление.</li>
+      <li><strong>Если за 48–72 часа на левофлоксацине нет улучшения</strong> (температура держится, одышка усиливается, слабость не уходит) — возвращаться в стационар, без обсуждений.</li>
+    </ol>
+  </div>
+
+  <div class="role-card violet">
+    <span class="doctor-tag">🧪 Терапевт по лабораторным данным</span>
+    <p>По анализам — там есть несколько серьёзных находок, которые в выписке прокомментированы вяло.</p>
+
+    <h3>Калий 6.4 ммоль/л — гиперкалиемия</h3>
+    <p>При норме 3.5–5.0 это <strong>опасно</strong>. При значениях выше 6.0 уже есть риск нарушений ритма сердца, вплоть до остановки. У пожилого с тахикардией 105 и пневмонией это особенно тревожно. Причины могут быть разные: обезвоживание + нарушение работы почек, разрушение тканей при тяжёлой инфекции, лекарства (если он что-то принимает дома от давления — ингибиторы АПФ, спиронолактон — они задерживают калий).</p>
+    <p><strong>Что делать:</strong> в течение 1–2 дней пересдать калий + креатинин + мочевину, лучше в обычной поликлинике или в любой коммерческой лаборатории. Если калий снова >5.5 — нужна коррекция, и нужен врач очно. До пересдачи — <strong>никаких бананов, кураги, печёной картошки, томатной пасты, орехов</strong>, минимум апельсинов. Это всё богато калием.</p>
+
+    <h3>Альбумин 27.5 г/л — гипоальбуминемия</h3>
+    <p>Норма 35–52 — это выраженный дефицит. Альбумин — белок, который синтезирует печень из того, что человек ест. Уровень 27 говорит о <strong>белково-энергетической недостаточности</strong>: он давно плохо ест, плюс воспаление «съедает» белок. Это объясняет и кахексию, и периферические отёки ног, описанные при поступлении. Низкий альбумин у пожилого с пневмонией — независимый предиктор плохого исхода, об этом много исследований.</p>
+
+    <h3>Кальций 2.09 — снижен</h3>
+    <p>Норма 2.15–2.55, но это, скорее всего, ложное снижение из-за низкого альбумина (значительная часть кальция связана с альбумином). Корригированный кальций, вероятно, в норме. Перепроверять не первоочерёдно.</p>
+
+    <h3>Мочевина 9.43 — повышена</h3>
+    <p>Норма 3.2–7.3, при этом креатинин 88.6 — нормальный. Такое расхождение почти всегда означает <strong>обезвоживание</strong> или повышенный распад белка. У него всё сходится: две недели плохо ел и пил, плюс лихорадка, плюс воспаление.</p>
+
+    <h3>Мочевая кислота 359.5 — близко к верху</h3>
+    <p>Норма 208–428, пока не подагра, но контролировать стоит.</p>
+
+    <h3>Глюкоза 7.35 — повышена</h3>
+    <p>Норма до 6.4. Натощак ли это — неясно. Это может быть стрессовая гипергликемия на фоне инфекции (она проходит), а может — недиагностированный диабет 2 типа. Нужно через 2 недели после выздоровления сдать <strong>глюкозу натощак + гликированный гемоглобин (HbA1c)</strong>. HbA1c покажет средний сахар за 3 месяца — стрессовую он не спутает с диабетом.</p>
+
+    <h3>АСТ 44.1 — лёгкое повышение</h3>
+    <p>Норма до 35. АЛТ нормальный, билирубин нормальный. Изолированное повышение АСТ при нормальном АЛТ у больного с инфекцией — обычно неспецифично (мышцы, общее воспаление). Контролировать через 2 недели вместе с остальной биохимией.</p>
+
+    <h3>Липиды — отлично</h3>
+    <p>Холестерин 3.62, ЛПНП 1.79, ЛПВП 1.27, триглицериды 1.53 — отличный профиль. Скорее всего, частично из-за истощения, но цифры красивые.</p>
+
+    <h3>Что повторить и в какие сроки</h3>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Что сдать</th>
+          <th scope="col">Когда</th>
+          <th scope="col">Где</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Что сдать">Калий, натрий, креатинин, мочевина</td><td data-label="Когда">через 1–2 дня</td><td data-label="Где">поликлиника / Хеликс / Инвитро</td></tr>
+        <tr><td data-label="Что сдать">Общий анализ крови, СРБ</td><td data-label="Когда">через 7 дней</td><td data-label="Где">то же</td></tr>
+        <tr><td data-label="Что сдать">Альбумин, общий белок</td><td data-label="Когда">через 2 недели</td><td data-label="Где">то же</td></tr>
+        <tr><td data-label="Что сдать">Глюкоза натощак + HbA1c</td><td data-label="Когда">через 2–3 недели после выздоровления</td><td data-label="Где">то же</td></tr>
+        <tr><td data-label="Что сдать">АСТ, АЛТ, билирубин</td><td data-label="Когда">через 2 недели</td><td data-label="Где">то же</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="role-card pink">
+    <span class="doctor-tag">❤️ Кардиолог</span>
+    <p>Меня вызвали из-за двух вещей: калий 6.4 и пульс 105 при давлении 100/65.</p>
+    <p><strong>Гиперкалиемия 6.4 — это потенциально аритмогенная цифра.</strong> Я бы хотел увидеть ЭКГ, которую ему делали при поступлении (в выписке она не приведена, но при таком калии её обязаны были снять). <strong>Просьба:</strong> запросить в Люберецкой ОКБ копию ЭКГ из истории болезни — родственники имеют право. Если на ней есть высокие заострённые зубцы Т или расширение QRS — это электролитные изменения, и нужно реагировать быстрее.</p>
+    <p><strong>В ближайшие 1–2 дня — снять ЭКГ амбулаторно</strong> (любая поликлиника, любая платная клиника, 500–1500 ₽). Особенно если будет ощущение перебоев, головокружение, потемнение в глазах.</p>
+    <p><strong>Пульс 105 и АД 100/65</strong> в острой фазе — это компенсаторная реакция на инфекцию и обезвоживание, не самостоятельная проблема. По мере выздоровления должны прийти к норме. Но <strong>если через неделю пульс в покое всё ещё >90 или давление держится низким</strong> — это уже повод искать причину: скрытая сердечная недостаточность, гипотиреоз, продолжающееся воспаление.</p>
+    <h3>Что добавить после острой фазы (через 2–3 недели)</h3>
+    <ul>
+      <li>ЭхоКГ (УЗИ сердца) — в его возрасте базовое исследование, если давно не делали;</li>
+      <li>холтер ЭКГ на сутки, если будут жалобы на перебои;</li>
+      <li>NT-proBNP — маркер сердечной недостаточности; если есть отёки ног и одышка, которые не уходят после пневмонии, это самый быстрый способ понять, кардиальные они или нет.</li>
+    </ul>
+  </div>
+
+  <div class="role-card blue">
+    <span class="doctor-tag">🫁 Пульмонолог · отдельным голосом</span>
+    <p>Коротко добавлю к коллеге-терапевту.</p>
+    <p><strong>Верхнедолевая пневмония у пожилого — отдельный сюжет.</strong> Большинство «обычных» пневмоний — нижнедолевые. Верхнедолевая локализация всегда требует подумать: <strong>а это точно банальная бактериальная пневмония, или это туберкулёз?</strong> В 75 лет, с двухнедельным анамнезом нарастающей слабости, кахексией и падением альбумина — туберкулёз исключать обязательно.</p>
+    <h3>Что нужно</h3>
+    <ol>
+      <li><strong>Контрольная рентгенография через 7 дней — обязательна, как и назначили.</strong> Если за неделю на левофлоксацине инфильтрат не уменьшился — это серьёзный аргумент в пользу нетипичной природы (ТБ, грибы, опухоль с обструктивной пневмонией).</li>
+      <li><strong>Если через 4 недели после окончания антибиотика инфильтрат не ушёл полностью — нужно КТ грудной клетки.</strong> В 75 лет за пневмонией может скрываться опухоль, которая её и вызвала (обтурационная пневмония за счёт перекрытия бронха).</li>
+      <li><strong>Анализ мокроты на КУМ</strong> (кислотоустойчивые микобактерии) — простой и дешёвый скрининг туберкулёза. Если он откашливает мокроту, сдать в любом тубдиспансере или в коммерческой лаборатории.</li>
+    </ol>
+    <p>Это не паранойя, это стандарт ведения верхнедолевой пневмонии у пожилых. Девять раз из десяти — обычная бактериальная, проходит. На десятый — что-то другое, и пропускать нельзя.</p>
+  </div>
+
+  <div class="role-card green">
+    <span class="doctor-tag">🍲 Гериатр · нутрициолог</span>
+    <p>Я тут самый занудный, но самый важный голос. Антибиотик пневмонию вылечит. <strong>Но он не вылечит то, что довело его до пневмонии.</strong></p>
+    <p>Картина классическая для гериатрии: <strong>синдром старческой астении (frailty) + саркопения + белково-энергетическая недостаточность</strong>. Признаки:</p>
+    <ul>
+      <li>ИМТ 20.76 при росте 170 — нижняя граница нормы; для пожилого это уже мало (для 75+ оптимум 23–27);</li>
+      <li>альбумин 27.5 — выраженный дефицит;</li>
+      <li>две недели нарастающей слабости до того, как слёг;</li>
+      <li>кахексия в диагнозе;</li>
+      <li>периферические отёки (отчасти из-за низкого альбумина — вода уходит из сосудов в ткани).</li>
+    </ul>
+    <p><strong>Без работы над питанием он будет ходить по этому кругу:</strong> ослаб → инфекция → ещё больше ослаб → следующая инфекция → … И каждая следующая будет тяжелее предыдущей.</p>
+    <h3>Что делать в ближайшие 2–4 недели</h3>
+    <ol>
+      <li><strong>Белок — 1.2–1.5 г на кг веса в сутки.</strong> При весе 60 кг это 70–90 г белка в день. Это много. Реалистично: яйца 2–3 штуки, творог 200 г, рыба или птица 150–200 г, плюс молочное. Если с аппетитом плохо — <strong>протеиновые сипинги (Nutridrink, Fresubin, Nutricomp drink)</strong>, продаются в аптеке, 1–2 бутылочки в день между приёмами пищи. Это не «спортпит», это медицинское питание для пожилых и онкологических.</li>
+      <li><strong>Калорийность — минимум 25–30 ккал/кг/сут</strong>, то есть 1500–1800 ккал. При кахексии — больше.</li>
+      <li><strong>Дробное питание</strong>, 5–6 раз в день маленькими порциями. У пожилых с инфекцией большой объём за раз не лезет.</li>
+      <li><strong>Витамин D 2000 МЕ в день</strong> — почти у всех пожилых дефицит, влияет на иммунитет, мышцы, риск падений. Назначить можно эмпирически, но лучше через 2 недели сдать 25-OH-витамин D и скорректировать дозу.</li>
+      <li><strong>Когда станет лучше — простая физическая активность.</strong> Сначала просто сидеть в кресле вместо лежания, потом ходить по квартире, потом во двор. Без этого мышцы при саркопении не вернутся, а с ними не вернётся и автономность. Если есть возможность — гериатрическая реабилитация или хотя бы домашний ЛФК-инструктор на 5–10 занятий.</li>
+    </ol>
+  </div>
+
+  <div class="role-card">
+    <span class="doctor-tag">🧠 Отдельный важный разговор — про отказ от госпитализации</span>
+    <p>Это не медицинский, а семейный вопрос, но я как гериатр не могу его обойти.</p>
+    <p><strong>Он отказался от стационара через сутки.</strong> Причины бывают разные: страх больниц, потеря автономии, депрессия, начинающееся когнитивное снижение или совершенно осознанное взвешенное решение. Без него самого судить не возьмусь.</p>
+    <p>Но <strong>в ближайшие дни кто-то из близких должен жить рядом с ним 24/7</strong> — минимум первую неделю. У пожилого с пневмонией декомпенсация может развиться за часы.</p>
+  </div>
+
+  <div class="red-flag" role="region" aria-label="Красные флаги — немедленно вызывать скорую">
+    <h3>Признаки, при которых немедленно вызывать скорую</h3>
+    <ul>
+      <li>сатурация ниже 92%;</li>
+      <li>частота дыхания больше 24 в минуту в покое;</li>
+      <li>спутанность сознания, не узнаёт близких, путается в днях недели — у пожилых это часто <strong>первый и единственный</strong> признак ухудшения, температуры может не быть;</li>
+      <li>не может пить;</li>
+      <li>падение, не может встать;</li>
+      <li>посинение губ, кончиков пальцев.</li>
+    </ul>
+    <p>И всерьёз поговорить с ним ещё раз: <strong>повторная госпитализация — это не «сдаться», это инструмент.</strong> Сейчас он может вернуться сам. Через три дня может быть уже нельзя.</p>
+  </div>
+
+  <h2 class="section-h2">Сводный план одной страницей</h2>
+
+  <div class="summary">
+    <h3>Сегодня–завтра</h3>
+    <ul>
+      <li>купить пульсоксиметр, мерить сатурацию 3–4 раза в день;</li>
+      <li>начать левофлоксацин и амброксол строго по схеме;</li>
+      <li>пересдать калий + креатинин + мочевину, сделать ЭКГ;</li>
+      <li>организовать круглосуточное присутствие близкого человека;</li>
+      <li>запросить копию ЭКГ из больницы.</li>
+    </ul>
+
+    <h3>Эта неделя</h3>
+    <ul>
+      <li>ограничить продукты с высоким калием до пересдачи;</li>
+      <li>добавить белковые сипинги и витамин D;</li>
+      <li>следить за температурой, пульсом, сатурацией, аппетитом, ясностью сознания;</li>
+      <li>дробное усиленное питание.</li>
+    </ul>
+
+    <h3>Через 7 дней</h3>
+    <ul>
+      <li>контрольный рентген ОГК, ОАК, СРБ;</li>
+      <li>визит к участковому терапевту с результатами.</li>
+    </ul>
+
+    <h3>Через 2–3 недели</h3>
+    <ul>
+      <li>развёрнутая биохимия, HbA1c, 25-OH-витамин D;</li>
+      <li>УЗИ ОБП, ЭГДС (как назначено в выписке);</li>
+      <li>ЭхоКГ;</li>
+      <li>если инфильтрат не ушёл — КТ грудной клетки + консультация пульмонолога/фтизиатра;</li>
+      <li>начало двигательной реабилитации.</li>
+    </ul>
+
+    <h3>Красные флаги для скорой в любой момент</h3>
+    <p>Сатурация &lt;92%, ЧДД &gt;24, спутанность, посинение, не может пить, падение.</p>
+  </div>
+
+  <h2 class="section-h2">Уточняющий вопрос</h2>
+  <blockquote class="user">
+    <p>Теперь коротко и простым языком — это лечится?</p>
+  </blockquote>
+
+  <h2 class="section-h2">Ответ</h2>
+  <p>Да, лечится. Если коротко:</p>
+  <p><strong>Сама пневмония — да, должна вылечиться.</strong> Антибиотик ему назначен правильный, на 10 дней. У большинства людей, даже пожилых, верхнедолевая пневмония при таком лечении проходит за 2–3 недели.</p>
+
+  <h3>Но есть три «но», из-за которых исход не гарантирован</h3>
+  <ol>
+    <li><strong>Он ушёл из больницы сам.</strong> Дома лечиться можно, но рискованнее. Главная задача ближайших дней — не пропустить ухудшение. Пульсоксиметр на палец и кто-то рядом круглосуточно — это не перестраховка, это правда важно.</li>
+    <li><strong>Он истощён.</strong> Две недели почти не ел, альбумин и вес низкие. Антибиотик убьёт бактерии, но силы организму придётся восстанавливать самому — а ему сейчас нечем. Без усиленного питания (белок, сипинги из аптеки) выздоровление будет медленным, и риск повторной инфекции через месяц-два — высокий.</li>
+    <li><strong>Калий 6.4</strong> — это нужно перепроверить в ближайшие 1–2 дня. Скорее всего, скорректируется сам, но пока не проверили — это риск для сердца, который игнорировать нельзя.</li>
+  </ol>
+
+  <h3>Прогноз простыми словами</h3>
+  <ul>
+    <li>если ближайшие 7 дней пройдут без ухудшения и он будет есть — почти наверняка выкарабкается;</li>
+    <li>если за 2–3 дня на таблетках лучше не станет — нужно вернуть в больницу, не геройствовать;</li>
+    <li>даже если пневмония пройдёт, он сейчас в той точке, после которой пожилые либо восстанавливаются, либо начинают угасать. Многое решат следующие 2–3 месяца — питание, движение, контрольные анализы.</li>
+  </ul>
+
+  <div class="callout coral">
+    <p><strong>Коротко:</strong> лечится, но это не «выпил таблетки и забыл». Ближайшая неделя — критическая, ближайшие пару месяцев — решающие для того, вернётся ли он к нормальной жизни.</p>
+  </div>
+
+</main>
+
+<footer class="site">
+  <p>Этот текст — рабочая расшифровка переписки. Не заменяет консультацию очного врача. При любых сомнениях — звонить в скорую: <strong>103</strong> или <strong>112</strong>.</p>
+</footer>
+
+<script>
+  (function () {
+    var body = document.body;
+    var sizeBtns = document.querySelectorAll('[data-size]');
+    var contrastBtn = document.getElementById('contrast');
+
+    function setSize(size) {
+      body.classList.remove('text-large', 'text-xlarge');
+      if (size === 'large') body.classList.add('text-large');
+      if (size === 'xlarge') body.classList.add('text-xlarge');
+      sizeBtns.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.dataset.size === size ? 'true' : 'false');
+      });
+      try { localStorage.setItem('keron.size', size); } catch (e) {}
+    }
+    sizeBtns.forEach(function (b) {
+      b.addEventListener('click', function () { setSize(b.dataset.size); });
+    });
+
+    contrastBtn.addEventListener('click', function () {
+      var on = body.classList.toggle('high-contrast');
+      contrastBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      try { localStorage.setItem('keron.contrast', on ? '1' : '0'); } catch (e) {}
+    });
+
+    try {
+      var savedSize = localStorage.getItem('keron.size');
+      if (savedSize) setSize(savedSize);
+      if (localStorage.getItem('keron.contrast') === '1') {
+        body.classList.add('high-contrast');
+        contrastBtn.setAttribute('aria-pressed', 'true');
+      }
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
